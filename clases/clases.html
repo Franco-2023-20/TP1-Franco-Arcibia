@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Fitness</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<header>
+    <nav>
+        <div class="logo">GYM FA</div>
+        <ul class="nav-links">
+            <li><a href="../index/index.html">Inicio</a></li>
+            <li class="dropdown">
+    
+                    <a href="../clases/clases.html">Clases</a> 
+                <div class="dropdown-content">
+                </div>
+            </li>
+            <li><a href="../entrenadores/entrenadores.html">Entrenadores</a></li>
+            <li><a href="../formulario/index.html">Formulario</a></li>
+            
+            <li><a href="../precios/index.html">Precios</a></li>
+            <li><a href="../blog/blog.html">Nuestro BLOG</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+    <section class="portafolio">
+        <header class="section-head"> <h2>Nuestras Clases</h2> </header> 
+        <main class="mainContainer"> 
+            <div class="button-group">
+                <button class="button" data-filter="*" >TODOS  </button> 
+                <button class="button" data-filter=".musculacion" >musculacion  </button>  
+                <button class="button" data-filter=".yoga" >Yoga </button>  
+                <button class="button" data-filter=".crossfit" >CrossFit  </button>  
+                <button class="button" data-filter=".spinning" >Spinning  </button>     
+            </div>
+            <div class="gallery">
+                <div class="item musculacion">
+                    <div class="image-container">
+                        <img src="ima/musculacion.jpeg" alt="Musculación 1">
+                        <img src="ima/musculacion2.jpeg" alt="Musculación 1">
+                        <img src="ima/musculacion3.jpeg" alt="Musculación 1">
+                    </div>
+                    <div class="overlay">
+                        <h3>Musculación Avanzada</h3>
+                        <p>Entrenamiento de fuerza para expertos.</p>
+                    </div>
+                </div>
+                <div class="item crossfit">
+                    <div class="image-container">
+                        <img src="ima/Crossfit2.jpeg" alt="CrossFit 1">
+                        <img src="ima/Crossfit3.jpeg" alt="CrossFit 1">
+                        <img src="ima/crossfit4.jpg" alt="CrossFit 1">
+                    </div>
+                    <div class="overlay">
+                        <h3>CrossFit Extremo</h3>
+                        <p>Desafía tus límites con este entrenamiento intenso.</p>
+                    </div>
+                </div>
+                <div class="item yoga">
+                    <div class="image-container">
+                        <img src="ima/yoga2.jpeg" alt="Yoga 1">
+                        <img src="ima/yoga3.jpeg" alt="Yoga 1">
+                        <img src="ima/yoga4.jpeg" alt="Yoga 1">
+                    </div>
+                    <div class="overlay">
+                        <h3>Yoga Restaurativo</h3>
+                        <p>Relaja tu cuerpo y mente con esta clase suave.</p>
+                    </div>
+                </div>
+                <div class="item spinning">
+                    <div class="image-container">
+                        <img src="ima/spinning2.jpeg" alt="Spinning 1">
+                        <img src="ima/spinning3.jpeg" alt="Spinning 2">
+                        <img src="ima/spinning4.jpeg" alt="Spinning 3">
+                    </div>
+                    <div class="overlay">
+                        <h3>Spinning Cardio</h3>
+                        <p>Quema calorías y mejora tu resistencia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-table" data-class="musculacion">
+                <h2>Horario Semanal - Musculación</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Musculación</td>
+                            <td>8:00 - 9:00</td>
+                            <td>18:00 - 19:00</td>
+                            <td>8:00 - 9:00</td>
+                            <td>18:00 - 19:00</td>
+                            <td>9:00 - 10:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="schedule-table" data-class="crossfit">
+                <h2>Horario Semanal - CrossFit</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CrossFit</td>
+                            <td>9:00 - 10:00</td>
+                            <td>19:00 - 20:00</td>
+                            <td>9:00 - 10:00</td>
+                            <td>19:00 - 20:00</td>
+                            <td>10:00 - 11:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="schedule-table" data-class="yoga">
+                <h2>Horario Semanal - Yoga</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yoga</td>
+                            <td>10:00 - 11:00</td>
+                            <td>20:00 - 21:00</td>
+                            <td>10:00 - 11:00</td>
+                            <td>20:00 - 21:00</td>
+                            <td>11:00 - 12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="schedule-table" data-class="spinning">
+                <h2>Horario Semanal - Spinning</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spinning</td>
+                            <td>11:00 - 12:00</td>
+                            <td>21:00 - 22:00</td>
+                            <td>11:00 - 12:00</td>
+                            <td>21:00 - 22:00</td>
+                            <td>12:00 - 13:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $galleryContainer = $('.gallery').isotope({
+                itemSelector: '.item',
+                layoutMode: 'fitRows'
+            });
+
+            $('.button-group .button').on('click', function() {
+                $('.button-group .button').removeClass('active');
+                $(this).addClass('active');
+
+                var filterValue = $(this).attr('data-filter');
+                $galleryContainer.isotope({ filter: filterValue });
+
+                if (filterValue === '*') {
+                    // Mostrar todas las imágenes y el horario completo
+                    $('.item').show();
+                    $('.schedule-table').show();
+                } else {
+                    // Mostrar solo las imágenes y el horario correspondiente
+                    $('.item').hide();
+                    $(filterValue).show();
+                    $('.schedule-table').hide();
+                    $('.schedule-table[data-class="' + filterValue.replace('.', '') + '"]').show();
+                }
+            });
+        });
+    </script>
+</body>
+<footer>
+    <div class="container">
+        <div class="newsletter-form">
+            <h2>Suscríbete a nuestro newsletter</h2>
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+        <div class="social-media">
+            <h2>Síguenos en redes sociales</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/tugimnasio" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/tugimnasio" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/tugimnasio" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="map">
+            <h2>Ubicación</h2>
+            <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.4981779725604!2d-65.2933567!3d-24.189325999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744152047597!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>
+    </div>
+</footer>
+</html>

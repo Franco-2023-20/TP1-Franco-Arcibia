@@ -1,0 +1,324 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #121111;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    font-family: 'Arial Black', sans-serif; /* Fuente imponente */
+    font-size: 3em; /* Tamaño de letra grande (ajusta según necesites) */
+    font-weight: bold; /* Texto en negrita */
+    color: #05555c; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border: 5px solid #05555c; /* Borde grande y del mismo color que el texto */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 8px 8px 5px #eb57574d; /* Sombra para resaltar */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*aqui emppieza la tablas de precios*/
+.precios {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Boton y su contenedor*/
+.toggle-container {
+    display: flex; /* Para alinear los elementos horizontalmente */
+    align-items: center; /* Para centrar verticalmente los elementos */
+    justify-content: space-between; /* Para distribuir el espacio entre los elementos */
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 20px;
+}
+.plan-text {
+    font-size: 20px;
+    background-color: #05555c;
+    border-radius: 8px; ; /* Ajusta el tamaño de la fuente */
+    color: #fcfcff; /* Ajusta el color del texto */
+    transition: color 0.3s ;
+}
+.plan-anual {
+    order: 1;
+     /* Coloca "Anual" a la izquierda */
+}
+.toggle-switch {
+    order: 2; /* Coloca el botón en el centro */
+}
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.plan-mensual {
+    order: 3; /* Coloca "Mensual" a la derecha */
+}
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/*redondo que se mueve*/
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0c0c0c;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(235, 227, 227);
+    transition: .4s;
+    border-radius: 50%;
+}
+/**/
+
+/*que se cambie el color ((nf)*/
+input:checked + .slider {
+    background-color: #05555c;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+#plan-toggle:checked + .toggle-switch + .plan-mensual {
+    color: #05555c !important; /* Color para "Anual" cuando está seleccionado */
+}
+
+#plan-toggle:not(:checked) + .toggle-switch + .plan-anual {
+    color: #05555c !important; /* Color para "Mensual" cuando está seleccionado */
+}
+
+/*Boton mensual y anual*/
+
+.labels {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+  }
+/**/
+
+
+/*Precios*/
+.precios-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.precios-tabla th, .precios-tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.precios-tabla th {
+    background-color: #05555c;
+    color: white;
+}
+
+.precios-tabla tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-family:cursive;
+    font-weight: bold;
+}
+
+.precio-anual {
+    display: none;
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+    .precios {
+        width: 95%;
+    }
+}
+
+
+
+
+/*footer*/
+footer {
+    background-color: #222; /* Fondo oscuro */
+    color: #ccc; /* Texto gris claro */
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.newsletter-form, .social-media, .map {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #eee; /* Títulos ligeramente más claros */
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    background-color: #333; /* Fondo más oscuro para el input */
+    border: 1px solid #444;
+    color: #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #05555c; /* Color de acento */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+iframe {
+    width: 100%; /* El mapa ocupa todo el ancho disponible */
+    height: 300px; /* Altura del mapa */
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .newsletter-form, .social-media, .map {
+        width: 90%; /* Ocupa casi todo el ancho */
+    }
+}

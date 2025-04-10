@@ -1,0 +1,328 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    --body-clr: #f6f9fe;
+    --primary-clr: #05555c;
+    --primary-light-clr: #eaf3fa;
+    --links-clr: #186f78;
+    --text-clr: #3f7277;
+}
+.logo {
+    font-family: 'Arial Black', sans-serif; /* Fuente imponente */
+    font-size: 3em; /* Tamaño de letra grande (ajusta según necesites) */
+    font-weight: bold; /* Texto en negrita */
+    color: #05555c; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border: 5px solid #05555c; /* Borde grande y del mismo color que el texto */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 8px 8px 5px rgba(223, 56, 56, 0.3); /* Sombra para resaltar */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+/* body {
+    width: 100%;
+    min-height: 100vh;
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.portfolio {
+    width: 100%;
+    padding: 30px 8%;
+    background-color: var(--body-clr);
+}
+
+.portfolio .section-head {
+    max-width: 700px;
+    margin: 0px auto 25px;
+    text-align: center;
+}
+/* Titulo nuestras clases */
+.section-head h2 {
+    position: relative;
+    font-size: 32px;
+    margin: 10px 0px 30px;
+    color: var(--primary-clr);
+    text-align: center;
+}
+/* Botones de las clases */
+.button-group {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.button-group .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #c8d1d8;
+    color: var(--primary-clr);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+/* cambia color de boton cuando se apreta */
+.button-group .button.active {
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+}
+
+.button-group .button:hover {
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+}
+/*imagenes de  las clases*/
+div.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.gallery .item {
+    position: relative; /*Esto establece la posición del elemento como relativa. Esto es importante porque se usará para posicionar el overlay de manera absoluta dentro de este contenedor.*/
+    margin: 4px;
+    width: calc(33.33% - 8px);
+    overflow: hidden;
+    cursor: pointer; /* Esto cambia el cursor del ratón a una mano cuando se pasa sobre el elemento, indicando que es interactivo.*/
+}
+
+.item img {
+    width: 100%;
+    height: 100%; /*Esto asegura que las imágenes ocupen todo el ancho y alto de su contenedor padre (.item).*/
+    object-fit: cover;  /*Esto escala la imagen para cubrir todo el contenedor, recortando partes de la imagen si es necesario para mantener la proporción.*/
+    object-fit: cover;  
+    display: block;
+    transition: 0.3s; /*Esto agrega una transición suave de 0.3 segundos a cualquier cambio en la imagen (por ejemplo, cuando se hace hover).*/
+}
+
+div.gallery .item:hover img {
+    transform: scale(1.15);
+}
+/*texto dentro de las imagenes*/
+.item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 85, 92, 0.7);
+    color: var(--body-clr);
+    padding: 15px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.item .overlay p {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid var(--body-clr);
+    color: var(--body-clr);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.item .overlay p:hover {
+    background-color: var(--body-clr);
+    color: var(--primary-clr);
+}
+
+/* Estilos para la tabla de horarios */
+.schedule-table {
+    width: 100%;
+    margin-top: 30px;
+    overflow-x: auto; /* Para tablas grandes en pantallas pequeñas */
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--primary-light-clr);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table th {
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+    font-weight: 600;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+/*ayuda al disenio para diferentes pantallas*/
+@media (max-width: 1024px) {
+    div.gallery .item {
+        width: calc(50% - 8px);
+    }
+    /* Cuando la pantalla tiene un ancho de 1024 píxeles o menos, */
+    /*los elementos item se mostrarán en dos columnas en lugar de tres.*/
+}
+
+@media (max-width: 600px) {
+    div.gallery .item {
+        width: 100%;
+        margin: 4px 0px;
+    }
+    /* Cuando la pantalla tiene un ancho de 600 píxeles o menos, */
+    /*los elementos item se mostrarán en una columna apilados vertical.*/
+}
+/*Permiten que el diseño se adapte a diferentes tamaños de pantalla, proporcionando una experiencia de usuario óptima en dispositivos móviles, tabletas y computadoras de escritorio.1   */
+footer {
+    background-color: #222; /* Fondo oscuro */
+    color: #ccc; /* Texto gris claro */
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.newsletter-form, .social-media, .map {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #eee; /* Títulos ligeramente más claros */
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    background-color: #333; /* Fondo más oscuro para el input */
+    border: 1px solid #444;
+    color: #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #05555c; /* Color de acento */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+iframe {
+    width: 100%; /* El mapa ocupa todo el ancho disponible */
+    height: 300px; /* Altura del mapa */
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .newsletter-form, .social-media, .map {
+        width: 90%; /* Ocupa casi todo el ancho */
+    }
+}

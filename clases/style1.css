@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  html{
+    /*   *****   Storing Colors In Variables   *****  */
+    --body-clr: #f6f9fe;
+    --primary-clr: #05555c;
+    --primary-light-clr: #eaf3fa;
+    --links-clr: #186f78;
+    --text-clr: #3f7277;
+  }
+  body{
+    width: 100%;
+    min-height: 100vh;
+  }
+  .portafolio{
+    width: 100%;
+    padding: 30px 8%;
+    background-color: var(--body-clr);
+  }
+  .portafolio .section-head{
+    max-width: 700px;
+    margin: 0px auto 25px;
+    text-align: center;
+  }
+  .section-head h2{
+    position: relative;
+    font-size: 32px;
+    margin: 10px 0px 30px;
+    color: var(--primary-clr);
+  }
+  .button-group{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .button-group .button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #c8d1d8;
+    color: var(--primary-clr);
+    font-style: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  .button-group .button.active{
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+  }
+  .button-group .button:hover{
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+  }
+  div.gallery{
+    /* width: 100%; */
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  div.gallery .item{
+    display: flex;
+    position: relative;
+    margin: 0;
+     width: auto;
+
+    overflow: hidden;
+    cursor: pointer;
+    flex-direction: column;
+  }
+  /* .item img{
+    width: 200px;s
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+  } */
+  /* .image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.image-container img {
+  width: 200px;
+  height: auto;
+} */ 
+   div.gallery .item:hover img{
+    transform: scale(1.15);
+  } 
+  .item .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5,85,92,0.7);
+    color: var(--body-clr);
+    padding: 15px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+  .item:hover .overlay{
+    opacity: 1;
+  }
+  .item .overlay p{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid var(--body-clr);
+    color: var(--body-clr);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .item .overlay p:hover{
+    background-color: var(--body-clr);
+    color: var(--primary-clr);
+  }
+  
+  
+  @media(max-width: 1024px){
+    div.gallery .item{
+      width: calc(50% - 8px);
+    }
+  }
+  
+  @media(max-width: 600px){
+    div.gallery .item{
+      width: 100%;
+      margin: 4px 0px;
+    }
+  }
+  .schedule-table {
+    margin-top: 10px;
+    flex: 1;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

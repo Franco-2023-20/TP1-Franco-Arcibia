@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">GYM FA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+        
+                        <a href="../clases/clases.html">Clases</a> 
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+                <li><a href="../entrenadores/entrenadores.html">Entrenadores</a></li>
+                <li><a href="../formulario/index.html">Formulario</a></li>
+                
+                <li><a href="../precios/index.html">Precios</a></li>
+                <li><a href="../blog/blog.html">Nuestro BLOG</a></li>
+            </ul>
+            <button id="modo-oscuro">Modo Claro</button>  </nav>
+
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="ima/video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <h1>¡Alcanza tu máximo potencial!</h1>
+            <p>Entrena con los mejores y transforma tu cuerpo.</p>
+        </div>
+    </section>
+
+    <section class="featured-classes">
+        <h2>Clases Destacadas</h2>
+        <div class="classes-container">
+            <div class="class-card">
+                <img src="ima/yoga.jpeg"Yoga">
+                <h3>Yoga</h3>
+                <p>Relaja tu mente y fortalece tu cuerpo.</p>
+            </div>
+            <div class="class-card">
+                <img src="ima/Spinning.jpeg" alt="Spinning">
+                <h3>Spinning</h3>
+                <p>Quema calorías y diviértete al ritmo de la música.</p>
+            </div>
+            <div class="class-card">
+                <img src="ima/Crossfit.jpg" alt="Crossfit">
+                <h3>Crossfit</h3>
+                <p>Desafía tus límites y alcanza tus objetivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="counter">
+        <div class="counter-item">
+            <h2 class="counter-value" data-target="500">0</h2>
+            <p>Socios Satisfechos</p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="carousel">
+            <div class="testimonial">
+                <p>"¡Este gimnasio cambió mi vida! Los entrenadores son excelentes y las clases muy divertidas."</p>
+                <p>- Ana García</p>
+            </div>
+            <div class="testimonial">
+                <p>"Me encanta la variedad de clases y el ambiente motivador. ¡Lo recomiendo totalmente!"</p>
+                <p>- Juan Pérez</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="container">
+        <div class="newsletter-form">
+            <h2>Suscríbete a nuestro newsletter</h2>
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+        <div class="social-media">
+            <h2>Síguenos en redes sociales</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/tugimnasio" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/tugimnasio" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/tugimnasio" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="map">
+            <h2>Ubicación</h2>
+            <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.4981779725604!2d-65.2933567!3d-24.189325999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744152047597!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>
+    </div>
+</footer>
+</html>

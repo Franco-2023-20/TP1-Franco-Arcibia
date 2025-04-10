@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Fitness - Gimnasio Fitness</title>
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">GYM FA</div>
+            <ul class="nav-links">
+                <li><a href="../index/index.html">Inicio</a></li>
+                <li class="dropdown">
+        
+                        <a href="../clases/clases.html">Clases</a> 
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+                <li><a href="../entrenadores/entrenadores.html">Entrenadores</a></li>
+                <li><a href="../formulario/index.html">Formulario</a></li>
+                
+                <li><a href="../precios/index.html">Precios</a></li>
+                <li><a href="../blog/blog.html">Nuestro BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog">
+        <header class="section-head">
+            <h2>Blog de Fitness</h2>
+        </header>
+        <main class="main-container">
+            <aside class="sidebar">
+                <div class="tags">
+                    <h3>Tags</h3>
+                    <button class="tag" data-tag="entrenamiento">Todas</button>
+                    <button class="tag" data-tag="nutricion">Nutrición</button>
+                    <button class="tag" data-tag="yoga">Yoga</button>
+                    <button class="tag" data-tag="crossfit">CrossFit</button>
+                    <button class="tag" data-tag="spinning">Spinning</button>
+                    <button class="tag" data-tag="musculacion">Musculacion</button>
+                    <button class="tag" data-tag="cardio">Cardio</button>
+
+                </div>
+                <div class="categorias">
+                    <h3>Categorías</h3>
+                    <button class="categoria" data-categoria="principiantes">principiantes</button>
+                    <button class="categoria" data-categoria="rutinas">Rutinas</button>
+                    <button class="categoria" data-categoria="recetas">Recetas</button>
+                    <button class="categoria" data-categoria="estiramientos">Estiramientos</button>
+                    <button class="categoria" data-categoria="avanzado">Avanzado</button>
+                    <button class="categoria" data-categoria="tips">Tips</button>
+                </div>
+            </aside>
+            <div class="articulos">
+                <article class="articulo" data-tags="entrenamiento,musculacion " data-categorias="rutinas">
+                    <img src="ima/fuerza.webp" alt="Entrenamiento de fuerza">
+                    <h2>Entrenamiento de fuerza para principiantes</h2>
+                    <p>Consejos y rutinas para empezar a ganar músculo.</p>
+                    <div class="comentarios">
+    
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="JR"></div>
+                            <p>Increible ambiente</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="FG"></div>
+                            <p>Super recomendado!</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,nutricion" data-categorias="recetas">
+                    <img src="ima/nutricion.jpeg" alt="Recetas saludables">
+                    <h2>Recetas saludables para deportistas</h2>
+                    <p>Platos deliciosos y nutritivos para tu rendimiento.</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="FA"></div>
+                            <p>¡Me encantaron!</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="JD"></div>
+                            <p>¡SUPER DELICIOSOS!</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="CA"></div>
+                            <p>Ruiquisimooooss!!</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento" data-categorias="recetas">
+                    <img src="ima/receta.webp" alt="Recetas saludables">
+                    <h2>APrende esta comida</h2>
+                    <p>Preparacion rapido y energizante.</p>
+                    <div class="comentarios">
+                    
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="JD"></div>
+                            <p>SE VE RE BIEN..</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="OH"></div>
+                            <p>Facil de preparar</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,musculacion" data-categorias="tips">
+                    <img src="ima/tipP.jpg" alt="Recetas saludables">
+                    <h2>Tips para pesas</h2>
+                    <p>Hazlo asi , para evitar problemas.</p>
+                    <div class="comentarios">
+                    
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="IY"></div>
+                            <p>Me sirvio!!</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="SQ"></div>
+                            <p>Se entiende..</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,crossfit,cardio" data-categorias="principiantes">
+                    <img src="ima/crossfitP.jpeg" alt="Recetas saludables">
+                    <h2>CrossFit para principiantes</h2>
+                    <p>Aprende en este hermosa disciplina.</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="AG"></div>
+                            <p>¡MUY UTIL!</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="LM"></div>
+                            <p>¡SUPER para Aprender</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,crossfit, cardio" data-categorias="avanzado">
+                    <img src="ima/crossfitA.jpeg" alt="Recetas saludables">
+                    <h2>CrossFit Avanzado</h2>
+                    <p>Perfecciona tus maniobras.</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="TH"></div>
+                            <p>Ejercicios muy completos</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="PO"></div>
+                            <p>Perfecto!!</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,yoga" data-categorias="estiramientos">
+                    <img src="ima/yogaA.webp" alt="Recetas saludables">
+                    <h2>Yoga para todos.</h2>
+                    <p>Aprende a meditar y estirarte.</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="EA"></div>
+                            <p>Super relajador</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="NV"></div>
+                            <p>recomendadisimo!</p>
+                        </div>
+                        
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,spinning,cardio" data-categorias="estiramientos">
+                    <img src="ima/spinningA.jpeg" alt="Recetas saludables">
+                    <h2>Spinning Para Todos</h2>
+                    <p>Excelente para el cardio y circulacion</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="FA"></div>
+                            <p>Trabajan re bien.</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="JD"></div>
+                            <p>Salis cansado jajaj</p>
+                        </div>
+
+        
+                    </div>
+                </article>
+                <article class="articulo" data-tags="entrenamiento,estiramiento" data-categorias="tips">
+                    <img src="ima/tip.webp" alt="Recetas saludables">
+                    <h2>IMPORTANTE</h2>
+                    <p>Recuerde cuidar su espalda</p>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="MG"></div>
+                            <p>Consejos!.</p>
+                        </div>
+                        <div class="comentario">
+                            <div class="avatar" data-iniciales="JS"></div>
+                            <p>No ignoren!!</p>
+                        </div>
+                        
+        
+                    </div>
+                </article>
+            </div>
+                </main>
+    </section>
+    <script src="blog.js"></script>
+</body>
+<footer>
+    <div class="container">
+        <div class="newsletter-form">
+            <h2>Suscríbete a nuestro newsletter</h2>
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+        <div class="social-media">
+            <h2>Síguenos en redes sociales</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/tugimnasio" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/tugimnasio" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/tugimnasio" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="map">
+            <h2>Ubicación</h2>
+            <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.4981779725604!2d-65.2933567!3d-24.189325999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744152047597!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>
+    </div>
+</footer>
+</html>

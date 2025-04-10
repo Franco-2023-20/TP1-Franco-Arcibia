@@ -1,0 +1,45 @@
+/* ... (Tu CSS existente) ... */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+    grid-gap: 5px; /* Espacio más pequeño entre los elementos */
+    grid-auto-rows: 150px; /* Altura mínima para las filas */
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.gallery .item {
+    grid-row: span 1; /* Permite que los elementos se expandan verticalmente */
+}
+
+.gallery .item img {
+    width: 100%; /* Las imágenes ocupan todo el ancho del item */
+    height: 100%; /* Las imágenes ocupan toda la altura del item */
+    object-fit: cover; /* Recorta la imagen para cubrir el área */
+    display: block;
+}
+
+.schedule-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.schedule-table tbody tr {
+    display: none;
+}
+
+.schedule-table tbody tr.active {
+    display: table-row;
+}
