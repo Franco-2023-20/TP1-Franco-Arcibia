@@ -28,11 +28,48 @@ body {
 }
 
 header {
-    background-color: var(--color-header);
-    color: var(--color-nav-links);
-    padding: 1rem 0;
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    padding: 1rem 0;
+    display: flex; /* Usamos flexbox para una mejor distribución */
+    justify-content: space-between; /* Espacia los elementos dentro del header */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+/* Estilos para pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+    header {
+        /* Puedes ajustar el padding o agregar estilos específicos para escritorio aquí */
+        padding: 1.5rem 0;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+        padding: 1rem; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    /* Si tienes un logo o navegación, ajusta sus estilos aquí */
+    .logo {
+        margin-bottom: 1rem; /* Agrega margen inferior al logo */
+    }
+
+    nav {
+        width: 100%; /* La navegación ocupa todo el ancho */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección de la lista de navegación a columna */
+        align-items: flex-start; /* Alinea los elementos de la lista a la izquierda */
+        padding: 0; /* Elimina el padding de la lista */
+    }
+
+    nav li {
+        margin-bottom: 0.5rem; /* Agrega margen inferior a los elementos de la lista */
+    }
 }
 
 nav {
@@ -369,6 +406,15 @@ body.dark-mode {
     --color-card-shadow: rgba(0, 0, 0, 0.1); /* Cambiado a sombra oscura */
     --color-overlay-bg: rgba(0, 0, 0, 0.7); /* Cambiado a overlay oscuro */
     --color-table-border: #ddd; /* Cambiado a borde claro */
+--color-footer-bg: #f9f9f9; /* Fondo muy claro (casi blanco) */
+--color-footer-text: #333; /* Texto oscuro para contraste */
+--color-footer-title: #222; /* Títulos más oscuros para destacar */
+--color-footer-input-bg: #fff; /* Fondo blanco para inputs */
+--color-footer-input-border: #ccc; /* Borde gris claro para inputs */
+--color-footer-button-bg: #007bff; /* Azul para botones (color de acento común) */
+--color-footer-button-text: #fff; /* Texto blanco para botones */
+--color-footer-link: #007bff; /* Enlaces azules */
+--color-footer-link-hover: #0056b3; /* Azul más oscuro al pasar el ratón */
 }
 body.dark-mode header {
     background-color: var(--color-header);
@@ -377,4 +423,31 @@ body.dark-mode header {
 
 body.dark-mode .nav-links a {
     color: var(--color-nav-links);
+}
+body.dark-mode footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+}
+
+body.dark-mode footer h2 {
+    color: var(--color-footer-title);
+}
+
+body.dark-mode footer input[type="email"] {
+    background-color: var(--color-footer-input-bg);
+    border: 1px solid var(--color-footer-input-border);
+    color: var(--color-footer-text);
+}
+
+body.dark-mode footer button {
+    background-color: var(--color-footer-button-bg);
+    color: var(--color-footer-button-text);
+}
+
+body.dark-mode footer ul li a {
+    color: var(--color-footer-link);
+}
+
+body.dark-mode footer ul li a:hover {
+    color: var(--color-footer-link-hover);
 }
