@@ -59,6 +59,9 @@ header {
 
     nav {
         width: 100%; /* La navegación ocupa todo el ancho */
+        display: none; /* Oculta la navegación por defecto */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul {
