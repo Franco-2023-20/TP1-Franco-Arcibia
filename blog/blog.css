@@ -9,7 +9,7 @@
   }
   body.dark-mode {
     --background-color: #121212; /* Fondo oscuro */
-    --text-color: white; /* Texto claro */
+    --text-color: rgb(181, 36, 36); /* Texto claro */
     --secondary-text-color: #ccc; /* Texto secundario claro */
     --card-bg: #333;
     --card-shadow: rgba(255, 255, 255, 0.1);
@@ -24,7 +24,10 @@
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
   }
-
+  .articulo h2,
+  .articulo p {
+      color: var(--text-color); /* Aplica el color del texto desde las variables */
+  }
 header {
     background-color: #e0d7d7;
     color: rgb(25, 23, 23);
@@ -33,14 +36,23 @@ header {
     justify-content: space-between; /* Espacia los elementos dentro del header */
     align-items: center;
 }
+.section-head h2 {
+    color: brown;
+}
+body.dark-mode .section-head h2 {
+    color: var(--primary-color);
+}
 body.dark-mode header {
     background-color: #0e0e0e;
-    color: rgb(210, 195, 195);
+    color: var(--background-color);
     padding: 1rem 0;
     display: flex; /* Usamos flexbox para una mejor distribución */
     justify-content: space-between; /* Espacia los elementos dentro del header */
     align-items: center;
 }
+
+
+
 /*footer*/
 /* Estilos del footer */
 footer {
@@ -114,6 +126,10 @@ footer {
     height: 300px;
     border: 0;
   }
+
+
+
+
 /* Estilos para pantallas más grandes (escritorio) */
 @media (min-width: 768px) {
     header {
@@ -153,6 +169,10 @@ footer {
     }
 }
 
+
+
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -182,7 +202,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(125, 47, 47);
     text-decoration: none;
 }
 
@@ -253,11 +273,12 @@ nav {
 }
 
 .articulo {
-    background-color: #fff;
+    background-color: #ece0e0;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
+ padding: 20px;
 }
 
 .articulo img {
