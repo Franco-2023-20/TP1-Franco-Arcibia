@@ -1,14 +1,157 @@
-body {
+:root {
+    --background-color: #f9f9f9; /* Fondo claro por defecto */
+    --text-color: black; /* Texto oscuro por defecto */
+    --primary-color: #05555c;
+    --secondary-text-color: #333; /* Texto secundario oscuro */
+    --card-bg: white;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --table-border-color: #ddd;
+  }
+  body.dark-mode {
+    --background-color: #121212; /* Fondo oscuro */
+    --text-color: white; /* Texto claro */
+    --secondary-text-color: #ccc; /* Texto secundario claro */
+    --card-bg: #333;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+    --table-border-color: #5c5c5c;
+    
+  }
+  
+  body {
     font-family: sans-serif;
     margin: 0;
-}
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  }
 
 header {
-    background-color: #131212;
-    color: white;
+    background-color: #e0d7d7;
+    color: rgb(25, 23, 23);
     padding: 1rem 0;
+    display: flex; /* Usamos flexbox para una mejor distribución */
+    justify-content: space-between; /* Espacia los elementos dentro del header */
+    align-items: center;
+}
+body.dark-mode header {
+    background-color: #0e0e0e;
+    color: rgb(210, 195, 195);
+    padding: 1rem 0;
+    display: flex; /* Usamos flexbox para una mejor distribución */
+    justify-content: space-between; /* Espacia los elementos dentro del header */
+    align-items: center;
+}
+/*footer*/
+/* Estilos del footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-form,
+  .social-media,
+  .map {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  footer h2 {
+    color: #eee;
+    margin-bottom: 20px;
+  }
+  
+  footer input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ccc;
+    border-radius: 5px;
+  }
+  
+  footer button {
+    background-color: #05555c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  footer ul li a:hover {
+    color: #fff;
+  }
+  
+  footer iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+  }
+/* Estilos para pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+    header {
+        /* Puedes ajustar el padding o agregar estilos específicos para escritorio aquí */
+        padding: 1.5rem 0;
+    }
 }
 
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+        padding: 1rem; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    /* Si tienes un logo o navegación, ajusta sus estilos aquí */
+    .logo {
+        margin-bottom: 1rem; /* Agrega margen inferior al logo */
+    }
+
+    nav {
+        width: 100%; /* La navegación ocupa todo el ancho */
+        display: none; /* Oculta la navegación por defecto */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección de la lista de navegación a columna */
+        align-items: flex-start; /* Alinea los elementos de la lista a la izquierda */
+        padding: 0; /* Elimina el padding de la lista */
+    }
+
+    nav li {
+        margin-bottom: 0.5rem; /* Agrega margen inferior a los elementos de la lista */
+    }
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -167,75 +310,6 @@ button {
     .contacto {
         width: 95%;
     }
-}
-footer {
-    background-color: #222; /* Fondo oscuro */
-    color: #ccc; /* Texto gris claro */
-    padding: 40px 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-}
-
-.newsletter-form, .social-media, .map {
-    width: 300px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #eee; /* Títulos ligeramente más claros */
-    margin-bottom: 20px;
-}
-
-input[type="email"] {
-    width: 70%;
-    padding: 10px;
-    background-color: #333; /* Fondo más oscuro para el input */
-    border: 1px solid #444;
-    color: #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #05555c; /* Color de acento */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-ul li a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-ul li a:hover {
-    color: #fff;
-}
-
-iframe {
-    width: 100%; /* El mapa ocupa todo el ancho disponible */
-    height: 300px; /* Altura del mapa */
-    border: 0;
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,10 @@
 /* style.css */
 :root {
     --color-fondo: #121212; /* Cambiado a oscuro */
-    --color-texto: #e0e0e0; /* Cambiado a oscuro */
+    --color-texto: #f1e8e8; /* Cambiado a oscuro */
     --color-header: #212121; /* Cambiado a oscuro */
     --color-nav-links: #e2dddd; /* Cambiado a oscuro */
-    --color-dropdown-bg: #424242; /* Cambiado a oscuro */
+    --color-dropdown-bg: #3d3838; /* Cambiado a oscuro */
     --color-dropdown-text: #e0e0e0; /* Cambiado a oscuro */
     --color-counter-bg: #303030; /* Cambiado a oscuro */
     --color-card-bg: #333; /* Cambiado a oscuro */
@@ -26,7 +26,7 @@ body {
     font-family: sans-serif;
     margin: 0;
 }
-
+/*agarra el root a oscuro*/
 header {
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -132,6 +132,8 @@ nav {
     display: block;
 }
 
+
+/**/
 .hero {
     position: relative;
     height: 500px;
@@ -153,13 +155,15 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: rgb(241, 211, 211);
     background-color: var(--color-overlay-bg);
 }
+/**/
 
-.featured-classes {
+.featured-classes h2{
     padding: 50px 20px;
     text-align: center;
+    color:var(--color-dropdown-bg) ;
 }
 
 .classes-container {
@@ -197,9 +201,10 @@ nav {
     padding: 0 10px 10px;
     margin: 0;
 }
-
+/* yesyimonios */
 .counter {
     background-color: var(--color-counter-bg);
+    color: var(--color-texto);
     padding: 50px 20px;
     text-align: center;
 }
@@ -212,10 +217,14 @@ nav {
     font-size: 3rem;
     margin: 0;
 }
-
+.testimonials h2{
+    color: var(--color-card-bg)
+    
+}
 .testimonials {
     padding: 50px 20px;
     text-align: center;
+    color: var(--color-fondo);
 }
 
 .carousel {
@@ -397,10 +406,11 @@ iframe {
         width: 90%; /* Ocupa casi todo el ancho */
     }
 }
+/*agarra el modo oscuro*/
 body.dark-mode {
     --color-fondo: #f4f4f4; /* Cambiado a fondo claro */
     --color-texto: #333; /* Cambiado a texto oscuro */
-    --color-header: #f6eded; /* Cambiado a header oscuro */
+    --color-header: #f1ebeb; /* Cambiado a header oscuro */
     --color-nav-links: rgb(30, 29, 29); /* Cambiado a nav links blancos */
     --color-dropdown-bg: #f9f9f9; /* Cambiado a dropdown claro */
     --color-dropdown-text: black; /* Cambiado a dropdown texto oscuro */
@@ -427,6 +437,14 @@ body.dark-mode header {
 body.dark-mode .nav-links a {
     color: var(--color-nav-links);
 }
+
+.featured-classes h2{
+    padding: 50px 20px;
+    text-align: center;
+    color:var(--color-nav-links) ;
+    background-color: var(--color-header);
+}
+/*footer*/
 body.dark-mode footer {
     background-color: var(--color-footer-bg);
     color: var(--color-footer-text);
@@ -453,4 +471,18 @@ body.dark-mode footer ul li a {
 
 body.dark-mode footer ul li a:hover {
     color: var(--color-footer-link-hover);
+
+    /**/
+
+
+    
+}
+body.dark-mode .testimonials h2{
+    color: var(--color-texto)
+    
+}
+body.dark-mode .testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--color-texto);
 }
