@@ -357,7 +357,12 @@ div.gallery .item:hover img {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-
+.schedule-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #0f0e0e;
+    color: #5c5c5c;
+}
 .schedule-table th {
     background-color: var(--primary-clr);
     color: var(--body-clr);
